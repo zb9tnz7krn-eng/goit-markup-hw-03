@@ -1,7 +1,25 @@
+/* ===== GLOBAL RESET ===== */
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   color: #434455;
   background-color: #ffffff;
+  line-height: 1.5;
 }
 
 .container {
@@ -10,7 +28,22 @@ body {
   padding: 0 15px;
 }
 
-/* HEADER */
+/* visually hidden */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* ===== HEADER ===== */
 
 .header {
   border-bottom: 1px solid #e7e9fc;
@@ -35,24 +68,30 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-decoration: none;
-  color: #4d5ae5;
+  color: #2e2f42;
   margin-right: 76px;
 }
 
 .logo-accent {
-  color: #2e2f42;
+  color: #4d5ae5;
+}
+
+.footer .logo {
+  color: #f4f4fd;
 }
 
 .nav-list {
   display: flex;
   gap: 40px;
-  list-style: none;
 }
 
 .nav-link {
-  text-decoration: none;
   font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
   color: #2e2f42;
+  text-decoration: none;
   padding: 24px 0;
 }
 
@@ -68,12 +107,15 @@ body {
 .address-list {
   display: flex;
   gap: 40px;
-  list-style: none;
 }
 
 .address-link {
-  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
   color: #434455;
+  text-decoration: none;
 }
 
 .address-link:hover,
@@ -81,7 +123,7 @@ body {
   color: #404bbf;
 }
 
-/* HERO */
+/* ===== HERO ===== */
 
 .hero {
   background-color: #2e2f42;
@@ -100,9 +142,12 @@ body {
 }
 
 .hero-button {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  font-weight: 500;
   background-color: #4d5ae5;
   color: #ffffff;
-  font-weight: 500;
   padding: 16px 32px;
   border: none;
   border-radius: 4px;
@@ -114,18 +159,7 @@ body {
   background-color: #404bbf;
 }
 
-/* SECTION TITLE */
-
-.section-title {
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 1.11;
-  text-align: center;
-  margin-bottom: 72px;
-  color: #2e2f42;
-}
-
-/* FEATURES */
+/* ===== FEATURES ===== */
 
 .features {
   padding: 120px 0;
@@ -134,22 +168,27 @@ body {
 .features-list {
   display: flex;
   gap: 24px;
-  list-style: none;
+}
+
+.features-item {
+  width: calc((100% - 72px) / 4);
 }
 
 .features-subtitle {
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
+  letter-spacing: 0.02em;
   margin-bottom: 8px;
   color: #2e2f42;
 }
 
 .features-text {
-  line-height: 1.5;
+  font-size: 16px;
+  letter-spacing: 0.02em;
 }
 
-/* TEAM */
+/* ===== TEAM ===== */
 
 .team {
   background-color: #f4f4fd;
@@ -159,27 +198,34 @@ body {
 .team-list {
   display: flex;
   gap: 24px;
-  list-style: none;
 }
 
 .team-item {
   background-color: #ffffff;
+  border-radius: 0 0 4px 4px;
+  width: calc((100% - 72px) / 4);
+}
+
+.team-content {
+  padding: 32px 16px;
   text-align: center;
-  padding-bottom: 32px;
 }
 
 .team-name {
   font-size: 20px;
   font-weight: 500;
-  margin-top: 32px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
   margin-bottom: 8px;
+  color: #2e2f42;
 }
 
 .team-position {
-  line-height: 1.5;
+  font-size: 16px;
+  letter-spacing: 0.02em;
 }
 
-/* PORTFOLIO */
+/* ===== PORTFOLIO ===== */
 
 .portfolio {
   padding: 120px 0;
@@ -188,27 +234,35 @@ body {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
-  list-style: none;
+  column-gap: 24px;
+  row-gap: 48px;
 }
 
 .portfolio-item {
   width: calc((100% - 48px) / 3);
 }
 
+.portfolio-content {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
+}
+
 .portfolio-title {
   font-size: 20px;
   font-weight: 500;
-  margin-top: 32px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
   margin-bottom: 8px;
   color: #2e2f42;
 }
 
 .portfolio-text {
-  line-height: 1.5;
+  font-size: 16px;
+  letter-spacing: 0.02em;
 }
 
-/* FOOTER */
+/* ===== FOOTER ===== */
 
 .footer {
   background-color: #2e2f42;
@@ -220,12 +274,9 @@ body {
   margin-bottom: 16px;
 }
 
-.footer .logo-accent {
-  color: #f4f4fd;
-}
-
 .footer-text {
+  font-size: 16px;
+  letter-spacing: 0.02em;
   color: #f4f4fd;
-  line-height: 1.5;
   max-width: 264px;
 }
