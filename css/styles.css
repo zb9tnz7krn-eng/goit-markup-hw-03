@@ -86,6 +86,7 @@ body {
 }
 
 .nav-link {
+  display: block;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -110,6 +111,7 @@ body {
 }
 
 .address-link {
+  display: block;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
@@ -157,6 +159,18 @@ body {
 .hero-button:hover,
 .hero-button:focus {
   background-color: #404bbf;
+}
+
+/* ===== SECTION TITLE ===== */
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  text-align: center;
+  margin-bottom: 72px;
 }
 
 /* ===== FEATURES ===== */
@@ -276,6 +290,7 @@ body {
 
 .footer-text {
   font-size: 16px;
+  line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
   max-width: 264px;
